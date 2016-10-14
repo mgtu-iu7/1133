@@ -11,26 +11,26 @@ int main(int argc, char** argv)
 	setlocale(LC_ALL,"RUS");
 	int iFildX,iFildY, iShootX,iShootY,iSizeX, iSizeY;
 	int CountShoot(0), CountContact(0);
-	const int iSizeFildX=100, iSizeFildY=100;  // ðàçìåð èãðîâîãî ïîëÿ
-	const int iSizeTargetX=30, iSizeTargetY=15;	// ðàçìåð ìèøåíè
+	const int iSizeFildX=100, iSizeFildY=100;  // Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¸Ð³Ñ€Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð¾Ð»Ñ
+	const int iSizeTargetX=30, iSizeTargetY=15;	// Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð¸ÑˆÐµÐ½Ð¸
 	iSizeX=iSizeFildX-iSizeTargetX+1;
 	iSizeY=iSizeFildY-iSizeTargetY+1;
-	printf("\n \t *************  ÈÃÐÀ \"ÏÎÏÀÄÈ Â ÌÈØÅÍÜ\"  *************");
+	printf("\n \t *************  Ð˜Ð“Ð Ð \"ÐŸÐžÐŸÐÐ”Ð˜ Ð’ ÐœÐ˜Ð¨Ð•ÐÐ¬\"  *************");
 	do
 	{
 		iFildX=rand()%(iSizeX);
 		iFildY=rand()%(iSizeY);
-		printf("\n\n\t Ââåäèòå êîîðäèíàòû âûñòðåëà [X Y]: ");
+		printf("\n\n\t Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ð²Ñ‹ÑÑ‚Ñ€ÐµÐ»Ð° [X Y]: ");
 		scanf("%u %u",&iShootX,&iShootY);
 		CountShoot++;
 		if ((iShootX>=iFildX)&(iShootX<=(iFildX+iSizeTargetX))&(iShootY>=iFildY)&(iShootY<=(iFildY+iSizeTargetY)))
 		{
-			printf("\n \t Ïîçäðàâëÿþ!!! Âû ïîïàëè â ìèøåíü.");
+			printf("\n \t ÐŸÐ¾Ð·Ð´Ñ€Ð°Ð²Ð»ÑÑŽ!!! Ð’Ñ‹ Ð¿Ð¾Ð¿Ð°Ð»Ð¸ Ð² Ð¼Ð¸ÑˆÐµÐ½ÑŒ.");
 			CountContact++;
 		}
 		else 
-			printf("\n \t Óâû... Ïðîìàõ.");	
-		printf("\n \n \t Ñòàòèñòèêà: êîëè÷åñòâî âûñòðåëîâ -%u, êîëè÷åñòâî ïîïàäàíèé-%u", CountShoot, CountContact);
+			printf("\n \t Ð£Ð²Ñ‹... ÐŸÑ€Ð¾Ð¼Ð°Ñ….");	
+		printf("\n \n \t Ð¡Ñ‚Ð°Ñ‚Ð¸ÑÑ‚Ð¸ÐºÐ°: ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð²Ñ‹ÑÑ‚Ñ€ÐµÐ»Ð¾Ð² -%u, ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¿Ð¾Ð¿Ð°Ð´Ð°Ð½Ð¸Ð¹-%u", CountShoot, CountContact);
 		
 	}
 	while(next_try());
@@ -43,8 +43,8 @@ bool next_try()
 	const char cKey0='0', cKey1='1';
 	int iLoop(1);
 	char cCh('\0');
-	printf("\n\n\t 0-Âûõîä 1-Óãàäûâàþ");
-	printf("\n\t Âàø âûáîð?");
+	printf("\n\n\t 0-Ð’Ñ‹Ñ…Ð¾Ð´ 1-Ð£Ð³Ð°Ð´Ñ‹Ð²Ð°ÑŽ");
+	printf("\n\t Ð’Ð°Ñˆ Ð²Ñ‹Ð±Ð¾Ñ€?");
 	while(iLoop)
 	{
 		cCh=_getch();
